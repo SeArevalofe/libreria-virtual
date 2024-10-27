@@ -1,0 +1,7 @@
+{
+  "name": "libreria-virtual",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

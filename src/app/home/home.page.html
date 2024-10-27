@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Home</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <!-- Asegúrate de que se usen las clases responsive -->
+      <ion-col size="4" *ngFor="let book of books">
+        <ion-card (click)="goToBookDetails(book)">
+          <ion-img [src]="book.image" alt="{{ book.title }}"></ion-img>
+          <ion-card-content>
+            <h2>{{ book.title }}</h2>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button [routerLink]="['/add-book']">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>
